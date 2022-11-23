@@ -94,6 +94,7 @@ it('no extra re-renders when changing unused field (render func calls in non str
   const renderFn = jest.fn()
   const App = () => {
     const _snap = useSnapshot(state)
+    ;(_snap as any).foobar
     renderFn()
     return (
       <>
